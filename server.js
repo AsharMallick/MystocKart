@@ -24,6 +24,10 @@ app.use(
 );
 app.use(cookieParser());
 
+app.get('/', (req, res)=>{
+    res.send("<h1>App is up and running</h1>")
+})
+
 app.use("/api/v1", user);
 app.use("/api/v1", product);
 app.use("/api/v1", order);
