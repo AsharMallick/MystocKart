@@ -23,7 +23,7 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
 exports.getProducts = catchAsyncError(async (req, res, next) => {
   const { category, search } = req.query;
-  const prodPerPage = 1;
+  const prodPerPage = 8;
   const page = req.query.page || 1;
   const skip = prodPerPage * (page - 1);
   const products = await Product.find({
